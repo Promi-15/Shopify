@@ -6,11 +6,13 @@ import Collections from "./pages/Collections";
 import About from "./pages/About"
 import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/collections" element={<Collections />} />
@@ -18,6 +20,7 @@ const App = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact/>} />
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 };
