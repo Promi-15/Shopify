@@ -17,61 +17,16 @@ const Hero = () => {
   // }, [index]);
 
   return (
-    // <div className="flex flex-col sm:flex-row lg:flex-row justify-around border bg-gray-100 p-9 mx-2 lg:mx-10 mt-5 rounded h-[600px]">
-    //   <motion.div
-    //     className="flex flex-col space-y-6 justify-center "
-    //     initial={{ opacity: 0, x: -50 }}
-    //     animate={{ opacity: 1, x: 0 }}
-    //     transition={{ duration: 0.8 }}
-    //   >
-    //     <div className="flex gap-3 items-center text-lg">
-    //       <hr className=" border-2 border-black w-8" />
-    //       <p className="italic text-lg">
-    //         {" "}
-    //         <b>Our Best Seller</b>
-    //       </p>
-    //     </div>
-
-    //     <motion.h1
-    //       initial={{ y: 50, opacity: 0 }}
-    //       animate={{ y: 0, opacity: 1 }}
-    //       transition={{ duration: 0.6, delay: 0.2 }}
-    //       className="text-5xl prata-regular"
-    //     >
-    //       Welcome to Shopify
-    //     </motion.h1>
-
-    //     <div className="flex gap-3 items-center text-lg">
-    //       <p className="italic text-lg">
-    //         <b>Shop now</b>
-    //       </p>
-    //       <hr className=" border-2 border-black w-8" />
-    //       <hr />
-    //     </div>
-    //   </motion.div>
-    //   <motion.div
-    //     // key={index}
-    //     className="lg:w-[490px] lg:h-[450px] flex items-center justify-center mt-5"
-    //     initial={{ opacity: 0 }}
-    //     animate={{ opacity: 1 }}
-    //     transition={{ duration: 0.8 }}
-    //   >
-    //     <img
-    //       src={slider1}
-    //       className="object-contain w-fit h-96 "
-    //       alt="Banner"
-    //     />
-    //   </motion.div>
-    // </div>
-    <div className="mx-10 mt-5 relative">
-      <img src={slider1} className="rounded-2xl" alt="" />
+    
+    <div className="lg:mx-10 mt-5 relative  ">
+      <img src={slider1} className="rounded-2xl min-h-screen " alt="" />
       <motion.div
         className="flex flex-col space-y-6 justify-center "
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="flex gap-3 items-center text-lg absolute top-60 ml-40 ">
+        <div className="hidden sm:block  gap-3 items-center text-lg absolute top-60 ml-40 ">
           <hr className=" border-2 border-black w-8" />
           <p className="italic text-xl">
             {" "}
@@ -83,16 +38,16 @@ const Hero = () => {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-5xl prata-regular absolute top-72 ml-40"
+          className="hidden sm:block text-5xl prata-regular absolute top-72 ml-40"
         >
           Welcome to Shopify
         </motion.h1>
 
         <div className="flex gap-3 items-center text-lg absolute top-80 ml-40 mt-10">
-          <p className="italic text-xl">
+          <p className="hidden sm:block italic text-xl">
             <b>Shop now</b>
           </p>
-          <hr className=" border-2 border-black w-8" />
+          <hr className="hidden sm:block border-2 border-black w-8" />
           <hr />
         </div>
       </motion.div>

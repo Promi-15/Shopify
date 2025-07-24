@@ -11,6 +11,7 @@
 
 
 
+
 @media (min-width : 640px) {
   a.active hr{
     display: block;
@@ -40,18 +41,29 @@
     transform: translateX(0%);
   }
 }
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
 
 @keyframes slideOut {
   from {
     transform: translateX(0%);
   }
   to {
-    transform: translateX(-120%);
+    transform: translateX(120%);
   }
 }
 
 .slide-in {
   animation: slideIn 1s ease-out forwards;
+}
+.slide {
+  animation: slide 1s ease-out forwards; /* Slide in from right to left */
 }
 
 .slide-out {
